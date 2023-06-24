@@ -1,9 +1,9 @@
-import { Text, TextInput } from "react-native";
+import { Text, TextInput, View } from "react-native";
 import { s } from "./InputTemperature.style";
 
 export function InputTemperature({ defaultValue }) {
   return (
-    <>
+    <View style={s.container}>
       <TextInput
         style={s.input}
         placeholder="Temperature"
@@ -12,7 +12,7 @@ export function InputTemperature({ defaultValue }) {
         defaultValue={defaultValue}
       />
 
-      <Text style={s.unit}> C</Text>
-    </>
+      <Text style={s.unit}>C</Text>
+    </View>
   );
 }
